@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery List</title>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+</head>
+<body>
+<div id="item-list"></div>
+Add item you want to purchase:
+<form hx-post="/add-item" hx-swap="innerHTML" hx-target="#item-list">
+    <label for="item">Item</label>
+    <input name="item" type="text"/>
+    <label for="amount">Amount</label>
+    <input name="amount" type="number"/>
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>
